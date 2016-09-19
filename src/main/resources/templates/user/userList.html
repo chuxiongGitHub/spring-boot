@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="/static/css/bootstrap.css"/>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr th:each="user:${user}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+    </tr>
+</table>
+<div class="container">
+    <a class="btn btn-primary" th:href="@{/user/form}">新增</a>
+</div>
+</body>
+</html>

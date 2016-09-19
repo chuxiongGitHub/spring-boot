@@ -20,4 +20,5 @@ public class IndexController {
         logger.info("进入到index方法");
         return "index";
     }
+
 }

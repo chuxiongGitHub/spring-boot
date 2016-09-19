@@ -1,11 +1,13 @@
 package com.rainbow.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Created by rainbow on 2016/9/14.
  * 一事专注，便是动人；一生坚守，便是深邃！
  */
 //封装返回的json结果
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class JsonResult<T> {
 
     //是否返回成功
