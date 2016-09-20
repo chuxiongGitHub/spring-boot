@@ -16,4 +16,7 @@ public interface UserService {
 
     public void save(User user);
 
+    public void delete(long userId);
+
+
 }

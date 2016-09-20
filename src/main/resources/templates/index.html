@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" ng-app="">
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+    <script th:src="@{/js/angular.min.js}" src="/static/js/angular.min.js"></script>
 </head>
 <body>
 <div class="panel panel-heading">
@@ -18,5 +19,13 @@
 sdfasdf
 asdfsadf撒打发斯蒂芬
 asfdasdfdsa
+<div>
+    <p>名字：<input th:type="text" ng-model="name"/></p>
+    <h1>hello{{name}}</h1>
+</div>
+<div ng-init="firstName='彩虹'">
+    <p>姓名为：<span ng-bind="firstName"></span></p>
+
+</div>
 </body>
 </html>

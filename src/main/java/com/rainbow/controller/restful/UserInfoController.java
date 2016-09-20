@@ -28,7 +28,7 @@ public class UserInfoController {
             List<User> list = userService.findAllUser();
             result = new JsonResult<User>(true, list.toString());
         } catch (Exception e) {
-            result = new JsonResult<User>(false, e.getMessage());
+            result = new JsonResult<User>(false, "返回失败");
         }
         return result;
     }

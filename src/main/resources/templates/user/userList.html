@@ -7,9 +7,15 @@
 </head>
 <body>
 <table class="table table-bordered">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
     <tr th:each="user:${user}">
         <td th:text="${user.name}"></td>
         <td th:text="${user.age}"></td>
+        <td><a th:type="submit" th:href="@{/user/delete/{userId}(userId=${user.userId})}" class="btn btn-danger">删除</a></td>
     </tr>
 </table>
 <div class="container">
